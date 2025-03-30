@@ -211,7 +211,7 @@ tbody tr:nth-child(even) {
   /* animation-fill-mode: backwards; */
   /* animation-direction: alternate; */
 }
-  
+
 @keyframes circle {
   0% {
     transform: rotate(30deg);
@@ -220,7 +220,6 @@ tbody tr:nth-child(even) {
     transform: rotate(-20deg);
   }
 }
-
 
 @keyframes fadeIn {
   0% {
