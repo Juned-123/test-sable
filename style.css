@@ -1,0 +1,236 @@
+.div_container {
+  display: flex;
+  align-items: center;
+  height: 230px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.scroll-parent {
+  position: relative;
+  width: 100vw;
+  height: 20rem;
+  padding: 2rem 0;
+  overflow-x: hidden;
+}
+
+.scroll-element {
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.scroll-element img {
+  width: 15%;
+}
+
+.primary {
+  animation: primary 7s linear infinite;
+}
+
+.secondary {
+  animation: secondary 7s linear infinite;
+}
+
+@keyframes primary {
+  from {
+    left: 0%;
+  }
+  to {
+    left: -100%;
+  }
+}
+
+@keyframes secondary {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0%;
+  }
+}
+
+/* vertical infinite scroll */
+
+.vertical-div-container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.vertical-scroll-parent {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 2rem 0;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.vertical-scroll-parent::-webkit-scrollbar {
+  display: none;
+}
+
+.vertical-scroll-parent {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.vertical-scroll-element {
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.vertical-scroll-element img {
+  width: 65%;
+}
+
+.vertical-primary {
+  animation: vertical-primary 11s linear infinite;
+}
+
+.vertical-secondary {
+  animation: vertical-secondary 11s linear infinite;
+}
+
+.vertical-primary-second {
+  animation: vertical-primary 7s linear infinite;
+}
+
+.vertical-secondary-second {
+  animation: vertical-secondary 7s linear infinite;
+}
+
+@keyframes vertical-primary {
+  from {
+    top: 0%;
+  }
+  to {
+    top: -100%;
+  }
+}
+
+@keyframes vertical-secondary {
+  from {
+    top: 100%;
+  }
+  to {
+    top: 0%;
+  }
+}
+
+/* moving card animation */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: black;
+}
+
+th,
+td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #2f2f2f; /* Vertical lines */
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+/* Remove left border from the first column */
+th:first-child,
+td:first-child {
+  border-left: none;
+}
+
+/* Optional Styling */
+thead {
+  background-color: black;
+  color: white;
+}
+
+tbody tr:nth-child(even) {
+  background-color: black;
+}
+
+.carousel-container {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+/* Carousel Track */
+.carousel {
+  display: flex;
+  gap: 40px;
+  animation: scroll 10s linear infinite;
+}
+
+/* Card Styling */
+.carousel-card {
+  flex: 0 0 calc((100% / 3) - 20px);
+  color: white;
+  font-size: 2rem;
+  border-radius: 20px;
+}
+
+/* Infinite Scroll Animation */
+@keyframes scroll {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(calc(-100% - 20px));
+  }
+}
+
+/* Pause Animation on Hover */
+.carousel-container:hover .carousel {
+  animation-play-state: paused;
+}
+
+/* card animation curve */
+.animate_image {
+  animation: circle 1s linear forwards;
+  transform-origin: 100px 900px;
+
+  /* animation-fill-mode: backwards; */
+  /* animation-direction: alternate; */
+}
+  
+@keyframes circle {
+  0% {
+    transform: rotate(30deg);
+  }
+  100% {
+    transform: rotate(-20deg);
+  }
+}
+
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.2s ease 0.2s forwards; /* 1.5s animation, 2s delay */
+}
