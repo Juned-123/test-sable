@@ -204,32 +204,3 @@ tbody tr:nth-child(even) {
 }
 
 /* card animation curve */
-.animate_image {
-  animation: circle 1s linear forwards;
-  transform-origin: 100px 900px;
-
-  /* animation-fill-mode: backwards; */
-  /* animation-direction: alternate; */
-}
-
-@keyframes circle {
-  0% {
-    transform: rotate(30deg);
-  }
-  100% {
-    transform: rotate(-20deg);
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.animate-fade-in {
-  animation: fadeIn 0.2s ease 0.2s forwards; /* 1.5s animation, 2s delay */
-}
